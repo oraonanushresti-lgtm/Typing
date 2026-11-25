@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TypeMaster | Typing Speed Test</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">⌨ Type<span>Master</span></a>
+        <p>Find your rhythm.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- TEST MODES -->
+
+        <nav class="mode-tabs">
+            <button class="mode active" data-mode="time" type="button">
+                time
+            </button>
+
+            <button class="mode" data-mode="words" type="button">
+                words
+            </button>
+
+            <button class="mode" data-mode="quote" type="button">
+                quote
+            </button>
+        </nav>
+
+
+        <!-- TIME SETTINGS -->
+
+        <section class="settings" id="time-settings">
+
+            <button class="setting" data-value="15" type="button">15</button>
+            <button class="setting active" data-value="30" type="button">30</button>
+            <button class="setting" data-value="60" type="button">60</button>
+            <button class="setting" data-value="120" type="button">120</button>
+
+            <span class="setting-label">seconds</span>
+
+        </section>
+
+
+        <!-- WORD SETTINGS -->
+
+        <section class="settings hidden" id="words-settings">
+
+            <button class="setting" data-value="10" type="button">10</button>
+            <button class="setting active" data-value="25" type="button">25</button>
+            <button class="setting" data-value="50" type="button">50</button>
+            <button class="setting" data-value="100" type="button">100</button>
+
+            <span class="setting-label">words</span>
+
+        </section>
+
+
+        <!-- LIVE STATISTICS -->
+
+        <section class="stats">
+
+            <div class="stat">
+                <span class="stat-label">wpm</span>
+                <span class="stat-value" id="wpm">0</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-label">accuracy</span>
+                <span class="stat-value" id="accuracy">100%</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-label" id="timer-label">time</span>
+                <span class="stat-value" id="timer">30</span>
+            </div>
+
+        </section>
+
+
+        <!-- TYPING AREA -->
+
+        <section class="typing-area" id="typing-area">
+
+            <div id="text-display" class="text-display"></div>
+
+            <textarea
+                id="typing-input"
+                aria-label="Type the displayed text here"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+                disabled
+            ></textarea>
+
+            <div class="start-hint" id="start-hint">
+                Click Start Test or click here to begin
+            </div>
+
+        </section>
+
+
+        <!-- CONTROLS -->
+
+        <div class="bottom-controls">
+
+            <span id="progress">Ready to start?</span>
+
+            <div class="action-buttons">
+
+                <button id="start-btn" type="button">
+                    Start Test
+                </button>
+
+                <button id="restart-btn" type="button">
+                    ↻ Restart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <section class="results hidden" id="results">
+
+            <h2>Test complete!</h2>
+
+            <div class="result-stats">
+
+                <div>
+                    <span class="result-label">wpm</span>
+                    <strong id="final-wpm">0</strong>
+                </div>
+
+                <div>
+                    <span class="result-label">accuracy</span>
+                    <strong id="final-accuracy">100%</strong>
+                </div>
+
+                <div>
+                    <span class="result-label">errors</span>
+                    <strong id="final-errors">0</strong>
+                </div>
+
+            </div>
+
+            <button id="try-again" type="button">
+                Try Again ↻
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        TypeMaster <span>·</span> Find your rhythm.
+    </footer>
+
+</body>
+</html>
+
+
